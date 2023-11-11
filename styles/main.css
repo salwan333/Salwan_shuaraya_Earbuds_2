@@ -22,8 +22,8 @@ header {
 }
 
 .logo {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   margin: 20px 15%;
   border-radius: 10px;
 }
@@ -83,7 +83,7 @@ header {
   transform: translateY(10px);
 }
 
-#aboutMe {
+#ABOUTPRODUCT {
   margin-top: 40px;
 }
 
@@ -104,16 +104,16 @@ section h1:hover {
   font-size: 40px;
 }
 
-#aboutMe img {
-  width: 600px;
+#ABOUTPRODUCT img {
+  width: 550px;
 }
 
-#aboutMe img:hover {
+#ABOUTPRODUCT img:hover {
   width: 650px;
   transition: 1s;
 }
 
-#aboutMe p {
+#ABOUTPRODUCT p {
   padding: 20px 100px;
   font-size: larger;
 }
