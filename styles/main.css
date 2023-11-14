@@ -22,15 +22,16 @@ header {
 }
 
 .logo {
-  width: 140px;
-  height: 140px;
+  width: 210px; /* 140px + 50% */
+  height: 210px; /* 140px + 50% */
   margin: 20px 15%;
   border-radius: 10px;
 }
 
+
 .logo:hover {
-  height: 135px;
-  width: 135px;
+  height: 210px;
+  width: 210px;
   margin: 12.5px 15%;
   transition: 0.3s;
 }
@@ -75,7 +76,7 @@ header {
 }
 
 #homeSection img {
-  width: 100%;
+  width: 90%;
 }
 
 #homeSection img:hover {
@@ -123,12 +124,12 @@ hr {
   margin: 50px;
 }
 
-#portfolio h2 {
+#COLOURPALLET h2 {
   font-size: xxx-large;
   font-weight: lighter;
 }
 
-#portfolioWorks {
+#COLOURPALLET {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 50px;
