@@ -1,124 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
     <title>EARBUDS</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/grid.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
-</head>
-<body>
-    <header>
-        <div>
-            <a href="index.html"><img src="images/logo.svg" alt="logo" class="logo"></a>
-        </div>
-
-        <div id="hamburger" onclick="myHamburger()">
-            <i class="fa fa-solid fa-bars fa-sharp"></i>
-        </div>
-
-        <nav id="navBar" class="navigation">
-            <ul id="navList">
-                <li><a class="lnk" href="#">HOME</a></li>
-                <li><a class="lnk" href="#contactUs">CONTACT</a></li>
-                <li><a class="lnk" href="#about-me">ABOUT PRODUCT</a></li>
-                <li><a class="lnk" href="#portfolio">PRICE</a></li>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1 class="hidden">Earbuds</h1>
+    <div id="main-navbar">
+      <header class="grid-con" id="main-header">
+        <nav
+          id="main-nav"
+          class="col-start-1 col-end-2 m-col-start-7 m-col-end-12">
+          <h2 class="hidden">Main Navigation</h2>
+          <button id="button"></button>
+          <div id="burger-con">
+            <ul id="burger-menu">
+              <li><a href="#h11">Home</a></li>
+              <li><a href="#s11">Shop</a></li>
+              <li><a href="#c11">Contact</a></li>
+              <li><a href="#b11">Buy Now</a></li>
             </ul>
+          </div>
         </nav>
-    </header>
-    
-    <section id="homeSection">
-        <img src="images/EARbud6_HERO.jpg" alt="my image">
+        <div class="col-span-full m-col-start-1 m-col-end-4" id="logo">
+          <img src="images/logo-beige.svg" alt="Earbuds Logo" />
+        </div>
+      </header>
+    </div>
+
+    <div class="col-span-full" id="h11">
+      <img src="images/heroimg.jpg" alt="Hero image" />
+    </div>
+
+    <section class="grid-con" id="hero-con">
+      <h2 class="hidden">Hero image</h2>
+      <div class="col-span-full">
+        <h2>Power which you want to experience</h2>
+        <canvas id="explode-view"></canvas>
+      </div>
     </section>
 
-    <section id="ABOUTPRODUCT">
-        <h1>ABOUT PRODUCT</h1>
-
-        <img src="images/Features.jpg" alt="my image">
-
+    <section class="grid-con" id="atributes">
+      <h2 class="col-span-full">The Best flow that you can experience</h2>
+      <div class="col-span-full m-col-start-1 m-col-end-5">
+        <h3>Crystal Clear Microphone</h3>
+        <img src="images/conectivity.jpg" alt="conectivity" />
         <p>
-            Few Features of the earbuds 
+           
+
         </p>
-    </section>
-    
-    <hr>
-    <section id="colour pallet">
-        <h1>COLOUR PALLET</h1>
-        <h2> DIFFRENT COLOURS </h2>
-
-
-        <div id="portfolioWorks">
-            <div class="myWorks">
-                <img class="projectImage" src="images/mywork/billybeer.jpeg" alt="img1"/>
-                <h3>BLUE</h3>
-            </div>
-            <div class="myWorks">
-                <img class="projectImage" src="images/mywork/fitness.jpg" alt="img2"/>
-                <h3>GREEN</h3>
-            </div>
-            <div class="myWorks">
-                <img class="projectImage" src="images/mywork/earbuds.jpg" alt="img3"/>
-                <h3>RED</h3>
-            </div>
-            <div class="myWorks">
-                <img class="projectImage" src="images/mywork/bheemveda.jpg" alt="img4"/>
-                <h3>NOVA</h3>
-            </div>
-        </div>
-
+      </div>
+      <div class="col-span-full m-col-start-5 m-col-end-9">
+        <h3>NOISE CANCELATION</h3>
+        <img src="images/noise.jpg" alt="noise" />
+        <p>
+           
+        </p>
+      </div>
+      <div class="col-span-full m-col-start-9 m-col-end-13">
+        <h3>17MM DRIVERS HEAVY BASS</h3>
+        <img src="images/design.jpg" alt="design" />
+        <p>
+           
+        </p>
+      </div>
     </section>
 
-    <hr>
-    <section id="skills">
-        <h1>X-RAY SLIDER</h1>
+    <section class="grid-con" id="hotspots">
+      <h2 class="col-span-full">
+         EarBuds Hotspot Experience
+      </h2>
 
-        <div id="mySkills">
-            <div class="skill">
-                <img class="skillImg" src="images/skills/programming.jpg" alt="img1"/>
-                <h3>PROGRAMING</h3>
-            </div>
-            <div class="skill">
-                <img class="skillImg" src="images/skills/design.jpg" alt="img2"/>
-                <h3>DESIGN</h3>
-            </div>
-            <div class="skill">
-                <img class="skillImg" src="images/skills/marketing.jpg" alt="img3"/>
-                <h3>DIGITAL MARKETING</h3>
-            </div>
-        </div>
+      <div class="col-span-full">
+        <model-viewer
+          id="model"
+          src="model/hotspot.gltf"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          poster="images/poster.webp"
+          shadow-intensity="1"
+          exposure="1.7"
+          camera-orbit="52.34deg 88.29deg 874.8m"
+          field-of-view="30deg"
+        >
+          <button
+            class="hotspot"
+            slot="hotspot-1"
+            data-position="0.4498600408938401m 0.8069294924369161m -1.1056355484761438m"
+            data-normal="0.27485685516895264m 0.09533748101270756m 0.9567468180667158m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation" id="hotspot-1"></div>
+          </button>
 
+          <button
+            class="Hotspot"
+            slot="hotspot-2"
+            data-position="0.4539372414906218m 0.39577884484679093m -1.1183218303236386m"
+            data-normal="0.2757352477030659m 0.26567684061824354m 0.923788877143061m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation" id="hotspot-2"></div>
+          </button>
+
+          <button
+            class="Hotspot"
+            slot="hotspot-3"
+            data-position="0.21058749014739517m 0.15430218152360323m -1.3736990106502684m"
+            data-normal="-0.7394990496194143m -0.44229520502345193m 0.5074604489270526m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation" id="hotspot-3"></div>
+          </button>
+
+          <button
+            class="Hotspot"
+            slot="hotspot-4"
+            data-position="0.3429648121565666m 0.8384553741551748m -1.4997124811981855m"
+            data-normal="-0.24156916402101755m 0.5490472659315231m -0.8001196402834431m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation" id="hotspot-4"></div>
+          </button>
+
+          <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+          </div>
+          <button slot="ar-button" id="ar-button">View in your space</button>
+          <div id="ar-prompt">
+            <img src="images/ar_hand_prompt.png" />
+          </div>
+        </model-viewer>
+      </div>
+    </section>
+    <div id="s11">
+
+    <section class="grid-con" id="atributes">
+      <h2 class="col-span-full">COLOUR PALLET</h2>
+      <div class="col-span-full m-col-start-1 m-col-end-5">
+        <h3>RED</h3>
+        <img src="images/color1.jpg" alt="color" />
+      </div>
+      <div class="col-span-full m-col-start-5 m-col-end-9">
+        <h3>GREEN</h3>
+        <img src="images/color2.jpg" alt="color" />
+      </div>
+      <div class="col-span-full m-col-start-9 m-col-end-13">
+        <h3>BLUE</h3>
+        <img src="images/color3.jpg" alt="color" />
+      </div>
+    </section>
+    </div>
+
+    <section class="grid-con" id="caracteristics">
+      <h2 class="col-span-full">Enjoying Audio: The Workings of Earbuds</h2>
+      <div class="col-span-full m-col-span-8">
+        <img src="images/caracteristics1.jpg" alt="caracteristics" />
+      </div>
+      <div class="col-span-full m-col-span-4">
+        <p style="color:black;text-align: justify;">
+          Earbuds will allow you to discover a whole new world of sound.<br />
+          Take in crystal-clear audio, feel comfortable all day, and maintain
+          seamless connectivity.<br />
+          Our earbuds are made with cutting-edge technology and stylish designs
+          to transform your listening experience.
+          <br />
+          Raise the bar for your calls, music, and entertainment! It's time to
+          learn what makes a difference.
+        </p>
+        <br />
+        <div id="s1">
+        <a class="box col-span-full" href="#">Buy Now!</a>
+      </div>
+      </div>
     </section>
 
-    <hr>
-
-    <section id="contactUs">
-        <h1>CONTACT US</h1>
-        <div class="contactUsForm">
-            <form>
-                <!-- Your Name: <input type="text"> <br><br> -->
-                EMAIL: <input type="email"> <br><br>
-                NUMBER: <input type="number"> <br><br>
-                <textarea name="comments" id="textarea" placeholder="ADD TEXT: " cols="35" rows="10"></textarea> <br><br>
-                <input type="submit" id="sendBtn" value="SEND"">
-            </form>
+    <div class="grid-con">
+      <h2 class="col-span-full">Discover the Magic Within</h2>
+      <section id="xray" class="col-span-full">
+        <div id="mobile-tablet-view">
+          <img src="images/earbud-x-ray.jpg" alt="x-ray version" />
+          <img src="images/earbud.jpg" alt="textured version image" />
         </div>
+        <h2 class="hidden">X-Ray revealer</h2>
+        <div id="outerShell">
+          <div id="imageCon">
+            <!-- xray version -->
+            <div class="slideImage image-right"></div>
+            <!-- rendered version -->
+            <div class="slideImage image-left"></div>
+            <!-- drag bar -->
+            <div class="slideImage image-drag"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <br /><br />
+    <div id="b11">
+
+
+    <section class="grid-con" id="atributes">
+      <h2 class="col-span-full">
+        <a class="box col-span-full" href="#">BUY NOW</a>
+      </h2>
+      <p>&nbsp;</p>
+      <div class="col-span-full m-col-start-1 m-col-end-5">
+        <h3>RED</h3>
+        <img src="images/color1.jpg" alt="color" />
+        <p style="text-align: center">BRIGHT RED</p>
+        <p style="text-align: center">$199</p>
+      </div>
+      <div class="col-span-full m-col-start-5 m-col-end-9">
+        <h3>GREEN</h3>
+        <img src="images/color2.jpg" alt="color" />
+        <p style="text-align: center">NOVA GREEN</p>
+        <p style="text-align: center">$199</p>
+      </div>
+      <div class="col-span-full m-col-start-9 m-col-end-13">
+        <h3>BLUE</h3>
+        <img src="images/color3.jpg" alt="color" />
+        <p style="text-align: center">NOVA BLUE</p>
+        <p style="text-align: center">$199</p>
+      </div>
+    </section>
+  </div>
+    <section class="grid-con" id="plastic">
+  
+      <h2 class="col-span-full">
+        Cutting-Edge Technology
+      </h3>
+      <div class="col-span-full">
+        <img src="images/cutting.jpg" alt="cutting-edge" />
+        <p class="col-span-full" style="color:black;text-align: justify;">
+          Beam-forming microphones, adaptive noise cancellation, fast pairing, 
+          dual-source connectivity, low-latency 2.4GHz wireless connectivity, and 
+          immersive audio are all made possible by quantum SURROUND technology.
+          Pricelier than other options on the list, with a shorter battery life. 
+          gamers looking for a high-end audio experience that includes noise-cancelling 
+          features and excellent sound quality.
+        </p>
+      </div>
+      <a class="box col-span-full" href="#">Contact us!</a>
     </section>
 
     <footer>
-        <h3>Shauraya Salwan </h3>
-        <div class="socialMedia">
-            <a href="https://github.com/salwan333"> <i class="fa fa-brands fa-github"></i> </a>
-            <a href="#"> <i class="fa fa-brands fa-facebook"></i> </a>
-            <a href="https://instagram.com/shaurayasalwan?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"> <i class="fa fa-brands fa-instagram"></i> </a>
-            <a href="#"> <i class="fa fa-brands fa-twitter"></i> </a>
-            <a href="https://www.linkedin.com/in/shauraya-salwan-620835198?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"> <i class="fa fa-brands fa-linkedin"></i> </a>
-        </div>
+         <div id="c11">
+                    <div >
+                     <center>
+                      <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                       
+                          <table>
+                            <tr>
+                              <td>
+                               
+                                  <div class="form-group">
+                                  <label class="label" for="email">Email</label>
+                                 </div>
+                                 
+                              </td>
+                              <td>
+                               
+                                  <div class="form-group">
+                                  <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                               </div>
+                              
+                              </td>
+                            </tr>
+
+                            <tr>
+
+                              <td>
+                                <div class="form-group">
+                                  <label class="label" for="contact">Contact</label>
+                                 </div>
+
+                              </td>
+                              <td>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" name="contact" id="contact" placeholder="contact">
+                               </div>
+
+                              </td>
+                            </tr>
+
+                            <tr>
+
+                              <td>
+                                <div class="form-group">
+                                  <label class="label" for="#">Message</label>
+                               </div>
+
+                              </td>
+                              <td>
+                                <div class="form-group">
+                                  <textarea name="message" class="form-control" id="message" cols="30" rows="3" placeholder="Message"></textarea>
+                             </div>
+
+                              </td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" style="text-align: center;">
+                                <div class="form-group">
+                                  <input type="submit" value="Send Message" class="btn btn-primary">
+                                  <div class="submitting"></div>
+                                </div>
+
+                              </td>
+                            </tr>
+
+
+
+
+                          </table>                        
+                          
+
+
+                         
+
+
+                       
+                      </form>
+                    </center>
+                    </div>
+                            
+              
+                  </div>
 
     </footer>
 
+    <!-- Loads <model-viewer> for browsers: -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
+
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"
+    ></script>
+
     <script src="js/main.js"></script>
-
-</body>
+  </body>
 </html>
-
